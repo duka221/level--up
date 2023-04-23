@@ -3,18 +3,31 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import banner from "../../assets/banner.jpg";
+import banner from "../assets/banner.jpg";
 import TabContext from "@mui/lab/TabContext";
 import TabPanel from "@mui/lab/TabPanel";
 import { Container, IconButton, Paper, Stack,  } from "@mui/material";
-import { CashGames } from "../cashgames";
+import { CashGames } from "../components/cashgames/index";
+import { SpringSeries } from "../components/springseries";
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import { FinalStage } from "../components/finalstage";
 
 
 
 export default function BasicModal() {
   const [value, setValue] = React.useState("1");
-  
+  const ButtonStyle = {
+    textTransform:"none",
+    backgroundColor: "#ff6600",
+    transition: "background-color 0.5s ease, outline 0.3s ease",
+    outline: "10px solid #ff6600",
+    ml: value === 0 ? "7px" : "0",
+    mr: value === 2 ? "7px" : "0",
+    color: "white",
+    zIndex: 1,
+    height: 77,
+    boxShadow: "none",
+  };
   return (
     <Modal
       sx={{
@@ -29,8 +42,9 @@ export default function BasicModal() {
     >
       <Paper
         sx={{
+          bgcolor:"#1C1D1E",
           position: "absolute",
-          width: { lg: 900, md: 900, sm: 500, xs: 400 },
+          width: { lg: 900, md: 900, sm: 600, xs: 400 },
           maxHeight: "99vh",
           overflowY: "auto",
           "&::-webkit-scrollbar": {
@@ -44,11 +58,14 @@ export default function BasicModal() {
         }}
       >
         <Box
+          component="img"
+          src={banner}
           sx={{
-            backgroundImage: `url(${banner})`,
-            backgroundSize: "cover",
-            height: "35vh",
-            width: "100%",
+            objectFit: "cover",
+            width: 1,
+            borderRadius: "inherit",
+            borderBottomLeftRadius: 0,
+            borderBottomRightRadius: 0,
           }}
         />
           <Stack direction="row" justifyContent="space-between" width='870px' padding={1} sx={{position:'fixed', top:10, zIndex:200}}>
@@ -114,6 +131,7 @@ export default function BasicModal() {
               fontSize: "20px",
               color: "white",
             }}
+            fontWeight="bold"
           >
             მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი
           </Typography>
@@ -137,37 +155,37 @@ export default function BasicModal() {
                 border: "2px",
                 color: "white",
                 borderRadius: "20px",
-                p: "30px",
+                px: "10px",
                 backgroundColor: "#2C3234",
               }}
             >
               
-              <Button onClick={()=> setValue("1")} sx={{textTransform:"none"}} >
+              <Button fullWidth onClick={()=> setValue("1")} sx={value === "1" ? ButtonStyle : {textTransform:"none"}} >
                 <Box color="white">
-                <Typography fontSize="14px">
+                <Typography fontSize={{ lg: 12, md: 12, sm: 10, xs: 10 }}>
                   1 - 29 აპრილი
                 </Typography>
-                <Typography fontSize="18px">
+                <Typography fontSize={{ lg: 15, md: 15, sm: 13, xs: 13 }}>
                   Cash Games
                 </Typography>
                 </Box>     
               </Button>
-              <Button onClick={()=> setValue("2")} sx={{textTransform:"none"}} >
+              <Button  fullWidth onClick={()=> setValue("2")} sx={value === "2" ? ButtonStyle : {textTransform:"none"}} >
                 <Box color="white" >
-                <Typography fontSize="14px">
+                <Typography fontSize={{ lg: 12, md: 12, sm: 10, xs: 10 }}>
                   13 - 29 აპრილი
                 </Typography>
-                <Typography fontSize="18px">
+                <Typography fontSize={{ lg: 15, md: 15, sm: 13, xs: 13 }}>
                   Spring Series
                 </Typography>
                 </Box>     
               </Button>
-              <Button onClick={()=> setValue("3")} sx={{textTransform:"none"}}>
+              <Button fullWidth onClick={()=> setValue("3")} sx={value === "3" ? ButtonStyle : {textTransform:"none"}}  >
                 <Box color="white">
-                <Typography fontSize="14px">
+                <Typography fontSize={{ lg: 12, md: 12, sm: 10, xs: 10 }}>
                   30 აპრილი
                 </Typography>
-                <Typography fontSize="18px">
+                <Typography fontSize={{ lg: 15, md: 15, sm: 13, xs: 13 }}>
                   Final Stage
                 </Typography>
                 </Box>     
@@ -177,8 +195,8 @@ export default function BasicModal() {
             <TabPanel sx={{ p: 0 }} value="1">
               <CashGames />{" "}
             </TabPanel>
-            <TabPanel value="2">Item Two</TabPanel>
-            <TabPanel value="3">Item Three</TabPanel>
+            <TabPanel value="2"><SpringSeries/></TabPanel>
+            <TabPanel value="3"><FinalStage/></TabPanel>
           </TabContext>
         </Box>
         <Container

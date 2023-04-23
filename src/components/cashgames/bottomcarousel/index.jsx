@@ -12,7 +12,7 @@ import "./style.css";
 export const BottomCarousel = () => {
   return (
     <Box mt={2}>
-      <Typography fontSize="18px">მსგავსი აქციები</Typography>
+      <Typography fontSize="18px" fontWeight="bold">მსგავსი აქციები</Typography>
       <Box mt={2}>
         <Swiper
           slidesPerView={3}

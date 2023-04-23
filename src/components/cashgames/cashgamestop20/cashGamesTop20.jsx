@@ -29,7 +29,22 @@ export const CashGamesTop20 = () => {
     {
       id: 5,
       voucher: "800₾",
+      prize: "B კატეგორიის საგზური",
+    },
+    {
+      id: 6,
+      voucher: "1500₾",
       prize: "სპეც. ტურნირის ბილეთი",
+    },
+    {
+      id: 7,
+      voucher: "800₾",
+      prize: "B კატეგორიის საგზური",
+    },
+    {
+      id: 8,
+      voucher: "1500₾",
+      prize: "B კატეგორიის საგზური",
     },
   ];
   return (
@@ -59,7 +74,7 @@ export const CashGamesTop20 = () => {
             boxShadow: "0px 2px 6px 0px rgba(240,90,34,0.75)",
           }}
         />
-        <Typography textAlign="center" fontSize="18px" mt={2}>
+        <Typography textAlign="center" fontSize="18px" mt={2} fontWeight="bold">
           1 ₾ რეიკი = 1 ქულას
         </Typography>
       </Stack>
@@ -112,7 +127,25 @@ export const CashGamesTop20 = () => {
               პრიზი
             </Typography>
           </Stack>
-          <Box sx={{ height: 300, overflowY: "scroll" }}>
+          <Box sx={{ 
+             overflowY: "scroll",
+             overflowX: "hidden",
+             pr: 1,
+             height: 300,
+             "&::-webkit-scrollbar": {
+               width: "4px",
+             },
+             "&::-webkit-scrollbar-track": {
+               background: "#25292B",
+             },
+             "&::-webkit-scrollbar-thumb": {
+               background: "#EF5A21",
+               borderRadius: "4px",
+             },
+             "&::-webkit-scrollbar-thumb:hover": {
+               background: "#b0390e",
+             },
+          }}>
             {arr &&
               arr.map((item) => {
                 return (
@@ -148,7 +181,7 @@ export const CashGamesTop20 = () => {
                         </Typography>
                       </Box>
 
-                      <Typography fontSize="13px" ml={15.5}>
+                      <Typography fontSize="13px" ml={{lg:15.5, md:15.5, sm:15.5, xs:5}}>
                         {item.voucher}
                       </Typography>
                       <Typography fontSize="13px">{item.prize}</Typography>
@@ -202,7 +235,7 @@ export const CashGamesTop20 = () => {
                 px={2}
               >
                 <Box component="img" src={travelicon} />
-                <Typography>The Festival in Malta-ს საგზური</Typography>
+                <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>The Festival in Malta-ს საგზური</Typography>
               </Stack>
             </Box>
             <Box
@@ -237,7 +270,7 @@ export const CashGamesTop20 = () => {
                 px={2}
               >
                 <Box component="img" src={ticketicon} />
-                <Typography>
+                <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>
                   სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც
                   გათამაშდება The Festival in Malta-ს საგზური
                 </Typography>
@@ -275,7 +308,7 @@ export const CashGamesTop20 = () => {
                 px={2}
               >
                 <Box component="img" src={ticketicon} />
-                <Typography>ტექნიკის მაღაზიის ვაუჩერი</Typography>
+                <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>ტექნიკის მაღაზიის ვაუჩერი</Typography>
               </Stack>
             </Box>
           </Stack>
@@ -283,7 +316,7 @@ export const CashGamesTop20 = () => {
         <CashGamesTop20v2 />
         <Typography textAlign="center" mb={2}>
           {" "}
-          * ლიდერბორდის შედეგები განახლდება <Link>პოკერის ლობიში</Link>{" "}
+          * ლიდერბორდის შედეგები განახლდება <Link color="#EF5A21">პოკერის ლობიში</Link>{" "}
         </Typography>
       </Stack>
       </Box>

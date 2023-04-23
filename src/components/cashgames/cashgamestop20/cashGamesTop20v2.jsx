@@ -73,7 +73,27 @@ export const CashGamesTop20v2 = () => {
             პრიზი
           </Typography>
         </Stack>
-        <Box sx={{ height: 300, overflowY: "scroll" }}>
+        <Box 
+          sx={{ 
+            overflowY: "scroll",
+            overflowX: "hidden",
+            pr: 1,
+            height: 300,
+            "&::-webkit-scrollbar": {
+              width: "4px",
+            },
+            "&::-webkit-scrollbar-track": {
+              background: "#25292B",
+            },
+            "&::-webkit-scrollbar-thumb": {
+              background: "#EF5A21",
+              borderRadius: "4px",
+            },
+            "&::-webkit-scrollbar-thumb:hover": {
+              background: "#b0390e",
+            },
+         }}
+        >
           {arr &&
             arr.map((item) => {
               return (
@@ -109,9 +129,9 @@ export const CashGamesTop20v2 = () => {
                       </Typography>
                     </Box>
 
-                    <Typography fontSize="13px" ml={15.5}>
-                      {item.voucher}
-                    </Typography>
+                    <Typography fontSize="13px" ml={{lg:15.5, md:15.5, sm:15.5, xs:5}}>
+                        {item.voucher}
+                      </Typography>
                     <Typography fontSize="13px">{item.prize}</Typography>
                   </Stack>
                 </Box>
@@ -163,7 +183,7 @@ export const CashGamesTop20v2 = () => {
               px={2}
             >
               <Box component="img" src={travelicon} />
-              <Typography>The Festival in Malta-ს საგზური</Typography>
+              <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>The Festival in Malta-ს საგზური</Typography>
             </Stack>
           </Box>
           <Box
@@ -198,7 +218,7 @@ export const CashGamesTop20v2 = () => {
               px={2}
             >
               <Box component="img" src={ticketicon} />
-              <Typography>
+              <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>
                 სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც გათამაშდება
                 The Festival in Malta-ს საგზური
               </Typography>
@@ -236,7 +256,7 @@ export const CashGamesTop20v2 = () => {
               px={2}
             >
               <Box component="img" src={ticketicon} />
-              <Typography>ტექნიკის მაღაზიის ვაუჩერი</Typography>
+              <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>ტექნიკის მაღაზიის ვაუჩერი</Typography>
             </Stack>
           </Box>
         </Stack>

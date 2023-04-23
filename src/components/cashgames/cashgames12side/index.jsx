@@ -27,11 +27,11 @@ export const CashGames12Side = () => {
             top: 0,
           }}
         />
-        <Typography fontSize="18px">
+        <Typography fontSize={{ lg: 18, md: 18, sm: 14, xs: 14 }} fontWeight="bold">
           ᲓᲐᲛᲐᲢᲔᲑᲘᲗ ᲨᲔᲓᲒᲔᲑᲐ, ᲥᲔᲨᲒᲔᲘᲛᲘᲡ, ᲢᲣᲠᲜᲘᲠᲔᲑᲘᲡ ᲓᲐ ᲡᲞᲘᲜ ᲞᲝᲙᲔᲠᲘᲡ 12 SIDE
           ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲘ
         </Typography>
-        <Typography fontSize="15px">
+        <Typography fontSize={{ lg: 15, md: 15, sm: 12, xs: 12 }}>
           * Side ლიდერბორდების შესახებ დეტალური ინფორმაცია იხილეთ პოკერის
           ლობიში.
         </Typography>

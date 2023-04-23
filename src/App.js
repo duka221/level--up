@@ -1,4 +1,4 @@
-import BasicModal from './components/pages';
+import BasicModal from './pages/index';
 import React from 'react';
 
 function App() {

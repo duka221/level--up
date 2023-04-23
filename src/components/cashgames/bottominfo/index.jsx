@@ -12,7 +12,7 @@ export const BottomInfo = () => {
   return (
     <>
     <Box mt={4}>
-      <Typography fontSize="18px">წესები და პირობები</Typography>
+      <Typography fontSize="18px" fontWeight="bold">წესები და პირობები</Typography>
       <Box
         sx={{
           color: "white",
