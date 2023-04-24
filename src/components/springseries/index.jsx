@@ -9,8 +9,8 @@ export const SpringSeries = () => {
     <>
       <Tournaments />
       <Leaderboard />
-      <TournSatellities/>
-      <CashGames12Side/>
+      <TournSatellities />
+      <CashGames12Side />
       <BottomInfo />
       <BottomCarousel />
     </>

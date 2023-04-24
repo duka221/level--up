@@ -1,5 +1,5 @@
 import { Box, Stack, Tooltip, Typography } from "@mui/material";
-import React from 'react';
+import React from "react";
 import exampleicon from "../../../assets/example-icon.png";
 import ticketicon from "../../../assets/ticket-icon-sm.png";
 import travelicon from "../../../assets/travel-icon-sm.png";
@@ -73,8 +73,8 @@ export const CashGamesTop20v2 = () => {
             პრიზი
           </Typography>
         </Stack>
-        <Box 
-          sx={{ 
+        <Box
+          sx={{
             overflowY: "scroll",
             overflowX: "hidden",
             pr: 1,
@@ -92,7 +92,7 @@ export const CashGamesTop20v2 = () => {
             "&::-webkit-scrollbar-thumb:hover": {
               background: "#b0390e",
             },
-         }}
+          }}
         >
           {arr &&
             arr.map((item) => {
@@ -129,9 +129,12 @@ export const CashGamesTop20v2 = () => {
                       </Typography>
                     </Box>
 
-                    <Typography fontSize="13px" ml={{lg:15.5, md:15.5, sm:15.5, xs:5}}>
-                        {item.voucher}
-                      </Typography>
+                    <Typography
+                      fontSize="13px"
+                      ml={{ lg: 15.5, md: 15.5, sm: 15.5, xs: 5 }}
+                    >
+                      {item.voucher}
+                    </Typography>
                     <Typography fontSize="13px">{item.prize}</Typography>
                   </Stack>
                 </Box>
@@ -183,7 +186,9 @@ export const CashGamesTop20v2 = () => {
               px={2}
             >
               <Box component="img" src={travelicon} />
-              <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>The Festival in Malta-ს საგზური</Typography>
+              <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>
+                The Festival in Malta-ს საგზური
+              </Typography>
             </Stack>
           </Box>
           <Box
@@ -256,7 +261,9 @@ export const CashGamesTop20v2 = () => {
               px={2}
             >
               <Box component="img" src={ticketicon} />
-              <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>ტექნიკის მაღაზიის ვაუჩერი</Typography>
+              <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>
+                ტექნიკის მაღაზიის ვაუჩერი
+              </Typography>
             </Stack>
           </Box>
         </Stack>

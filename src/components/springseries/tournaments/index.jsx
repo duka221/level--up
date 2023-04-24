@@ -56,21 +56,21 @@ export const Tournaments = () => {
           py={4}
         >
         
-          <Typography fontWeight="bold" fontSize={{ lg: 18, md: 18, sm: 10, xs: 10 }}>
+          <Typography fontWeight="bold" fontSize={{ lg: 18, md: 18, sm: 10, xs: 10 }} textAlign="center">
             {" "}
             სერიის ფარგლებში ყოველდღიურად გაიმართება 3 ივენთი{" "}
           </Typography>
           <Stack direction="row" justifyContent="center" alignItems="center" borderRadius="50px" border="2px solid #F05A22" gap={3} boxShadow=" 0px 0px 10px 1px rgba(214,105,0,0.75), inset 0px 0px 10px 1px rgba(214,105,0,0.75)" >
             <IconButton sx={{color:"white", bgcolor:"#F05A22"}} > <AccessTimeIcon/> </IconButton>
             <Box mr={2}>
-            <Typography> 19:00 / 20:00 / 19:30 </Typography>
+            <Typography textAlign="center"> 19:00 / 20:00 / 19:30 </Typography>
             </Box>
           </Stack>
-          <Typography sx={{opacity:.9}}>
+          <Typography sx={{opacity:.9}} textAlign="center">
             {" "}
             *ყველა ტურნირზე მოხვედრა შესაძლებელია 0 ლარიდან.{" "}
           </Typography>
-          <Typography sx={{opacity:.9}}>
+          <Typography sx={{opacity:.9}} textAlign="center">
             {" "}
             ტურნირების სრული განრიგის სანახავად გადადი პოკერის ლობიში{" "}
           </Typography>
@@ -81,11 +81,13 @@ export const Tournaments = () => {
         </Stack>
         <Box
             component="img"
+            width={{ lg: 203, md: 203, sm: 100, xs: 100 }}
             src={PromoLeftImg}
             sx={{position:"absolute",left:4,bottom:4}}
           >
           </Box>
           <Box
+          width={{ lg: 220, md: 220, sm: 110, xs: 110 }}
             component="img"
             src={PromoRightImg}
             sx={{position:"absolute",right:4,bottom:4,}}

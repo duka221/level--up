@@ -1,5 +1,5 @@
 import { Box, Link, Stack, Tooltip, Typography } from "@mui/material";
-import React from 'react';
+import React from "react";
 import exampleicon from "../../../assets/example-icon.png";
 import ticketicon from "../../../assets/ticket-icon-sm.png";
 import travelicon from "../../../assets/travel-icon-sm.png";
@@ -49,7 +49,7 @@ export const CashGamesTop20 = () => {
   ];
   return (
     <>
-    <Box
+      <Box
         mt={3}
         sx={{
           border: "2px",
@@ -60,265 +60,280 @@ export const CashGamesTop20 = () => {
         }}
       >
         <Stack
-        alignItems="center"
-        justifyContent="center"
-        sx={{ position: "relative" }}
-      >
-        <Box
-          sx={{
-            width: 250,
-            height: 4,
-            bgcolor: "#F05A22",
-            borderBottomLeftRadius: "4px",
-            borderBottomRightRadius: "4px",
-            boxShadow: "0px 2px 6px 0px rgba(240,90,34,0.75)",
-          }}
-        />
-        <Typography textAlign="center" fontSize="18px" mt={2} fontWeight="bold">
-          1 ₾ რეიკი = 1 ქულას
-        </Typography>
-      </Stack>
-      <Stack
-        border="4px solid #25292B"
-        alignItems="center"
-        justifyContent="center"
-        bgcolor="#171718"
-        borderRadius="10px"
-        mt={4}
-        mb={2}
-      >
-        <Stack
           alignItems="center"
           justifyContent="center"
-          direction="row"
-          gap={2}
-          mt={2}
+          sx={{ position: "relative" }}
         >
-          <Typography fontSize="16px">TOP20 ლიდერბორდი ჰოლდემში</Typography>
-          <Tooltip title="დამატებითი ინფორმაცია">
-            <Box component="img" src={exampleicon} />
-          </Tooltip>
+          <Box
+            sx={{
+              width: 250,
+              height: 4,
+              bgcolor: "#F05A22",
+              borderBottomLeftRadius: "4px",
+              borderBottomRightRadius: "4px",
+              boxShadow: "0px 2px 6px 0px rgba(240,90,34,0.75)",
+            }}
+          />
+          <Typography
+            textAlign="center"
+            fontSize="18px"
+            mt={2}
+            fontWeight="bold"
+          >
+            1 ₾ რეიკი = 1 ქულას
+          </Typography>
         </Stack>
-
-        <Box
-          my={2}
-          sx={{
-            border: "2px",
-            color: "white",
-            borderRadius: "10px",
-            backgroundColor: "#25292B",
-            width: "95%",
-            p: 1.5,
-          }}
+        <Stack
+          border="4px solid #25292B"
+          alignItems="center"
+          justifyContent="center"
+          bgcolor="#171718"
+          borderRadius="10px"
+          mt={4}
+          mb={2}
         >
           <Stack
-            direction="row"
-            justifyContent="space-between"
             alignItems="center"
-            p={4}
+            justifyContent="center"
+            direction="row"
+            gap={2}
+            mt={2}
           >
-            <Typography fontSize="14px" color="#7D7D7D">
-              ადგილი
-            </Typography>
-            <Typography fontSize="14px" color="#7D7D7D">
-              ვაუჩერი
-            </Typography>
-            <Typography fontSize="14px" color="#7D7D7D">
-              პრიზი
-            </Typography>
+            <Typography fontSize="16px">TOP20 ლიდერბორდი ჰოლდემში</Typography>
+            <Tooltip title="დამატებითი ინფორმაცია">
+              <Box component="img" src={exampleicon} />
+            </Tooltip>
           </Stack>
-          <Box sx={{ 
-             overflowY: "scroll",
-             overflowX: "hidden",
-             pr: 1,
-             height: 300,
-             "&::-webkit-scrollbar": {
-               width: "4px",
-             },
-             "&::-webkit-scrollbar-track": {
-               background: "#25292B",
-             },
-             "&::-webkit-scrollbar-thumb": {
-               background: "#EF5A21",
-               borderRadius: "4px",
-             },
-             "&::-webkit-scrollbar-thumb:hover": {
-               background: "#b0390e",
-             },
-          }}>
-            {arr &&
-              arr.map((item) => {
-                return (
-                  <Box
-                    sx={{
-                      border: "2px solid #2C3234",
-                      color: "white",
-                      borderRadius: "50px",
-                      backgroundColor: "#1E2122",
-                      width: "95%",
-                      p: 1.5,
-                      my: 2,
-                    }}
-                  >
-                    <Stack
-                      direction="row"
-                      alignItems="center"
-                      justifyContent="space-between"
-                    >
-                      <Box
-                        ml={2}
-                        sx={{
-                          color: "white",
-                          borderRadius: "50px",
-                          backgroundColor: "#2C3234",
-                          width: "28px",
-                          height: "28px",
-                          textAlign: "center",
-                        }}
-                      >
-                        <Typography fontSize="13px" px={1} mt={0.5}>
-                          {item.id}
-                        </Typography>
-                      </Box>
 
-                      <Typography fontSize="13px" ml={{lg:15.5, md:15.5, sm:15.5, xs:5}}>
-                        {item.voucher}
-                      </Typography>
-                      <Typography fontSize="13px">{item.prize}</Typography>
-                    </Stack>
-                  </Box>
-                );
-              })}
+          <Box
+            my={2}
+            sx={{
+              border: "2px",
+              color: "white",
+              borderRadius: "10px",
+              backgroundColor: "#25292B",
+              width: "95%",
+              p: 1.5,
+            }}
+          >
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
+              p={4}
+            >
+              <Typography fontSize="14px" color="#7D7D7D">
+                ადგილი
+              </Typography>
+              <Typography fontSize="14px" color="#7D7D7D">
+                ვაუჩერი
+              </Typography>
+              <Typography fontSize="14px" color="#7D7D7D">
+                პრიზი
+              </Typography>
+            </Stack>
+            <Box
+              sx={{
+                overflowY: "scroll",
+                overflowX: "hidden",
+                pr: 1,
+                height: 300,
+                "&::-webkit-scrollbar": {
+                  width: "4px",
+                },
+                "&::-webkit-scrollbar-track": {
+                  background: "#25292B",
+                },
+                "&::-webkit-scrollbar-thumb": {
+                  background: "#EF5A21",
+                  borderRadius: "4px",
+                },
+                "&::-webkit-scrollbar-thumb:hover": {
+                  background: "#b0390e",
+                },
+              }}
+            >
+              {arr &&
+                arr.map((item) => {
+                  return (
+                    <Box
+                      sx={{
+                        border: "2px solid #2C3234",
+                        color: "white",
+                        borderRadius: "50px",
+                        backgroundColor: "#1E2122",
+                        width: "95%",
+                        p: 1.5,
+                        my: 2,
+                      }}
+                    >
+                      <Stack
+                        direction="row"
+                        alignItems="center"
+                        justifyContent="space-between"
+                      >
+                        <Box
+                          ml={2}
+                          sx={{
+                            color: "white",
+                            borderRadius: "50px",
+                            backgroundColor: "#2C3234",
+                            width: "28px",
+                            height: "28px",
+                            textAlign: "center",
+                          }}
+                        >
+                          <Typography fontSize="13px" px={1} mt={0.5}>
+                            {item.id}
+                          </Typography>
+                        </Box>
+
+                        <Typography
+                          fontSize="13px"
+                          ml={{ lg: 15.5, md: 15.5, sm: 15.5, xs: 5 }}
+                        >
+                          {item.voucher}
+                        </Typography>
+                        <Typography fontSize="13px">{item.prize}</Typography>
+                      </Stack>
+                    </Box>
+                  );
+                })}
+            </Box>
           </Box>
-        </Box>
-        <Box
-          my={2}
-          sx={{
-            border: "2px",
-            color: "white",
-            borderRadius: "10px",
-            backgroundColor: "#25292B",
-            width: "95%",
-            p: 1.3,
-          }}
-        >
-          <Stack>
-            <Box
-              sx={{
-                border: "2px solid #2C3234",
-                color: "white",
-                borderRadius: "10px",
-                backgroundColor: "#1E2122",
-                mt: 1.5,
-                position: "relative",
-              }}
-            >
+          <Box
+            my={2}
+            sx={{
+              border: "2px",
+              color: "white",
+              borderRadius: "10px",
+              backgroundColor: "#25292B",
+              width: "95%",
+              p: 1.3,
+            }}
+          >
+            <Stack>
               <Box
                 sx={{
-                  width: 4,
-                  height: 40,
-                  position: "absolute",
-                  left: 0,
-                  top: "50%",
-                  transform: "translate(0%, -50%)",
-                  bgcolor: "#F05A22",
-                  borderTopRightRadius: "4px",
-                  borderBottomRightRadius: "4px",
-                  boxShadow: "2px 0px 6px 0px rgba(240,90,34,0.75)",
+                  border: "2px solid #2C3234",
+                  color: "white",
+                  borderRadius: "10px",
+                  backgroundColor: "#1E2122",
+                  mt: 1.5,
+                  position: "relative",
                 }}
-              />
-              <Stack
-                direction="row"
-                alignItems="center"
-                gap={2}
-                height={75}
-                px={2}
               >
-                <Box component="img" src={travelicon} />
-                <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>The Festival in Malta-ს საგზური</Typography>
-              </Stack>
-            </Box>
-            <Box
-              sx={{
-                border: "2px solid #2C3234",
-                color: "white",
-                borderRadius: "10px",
-                backgroundColor: "#1E2122",
-                mt: 1.5,
-                position: "relative",
-              }}
-            >
+                <Box
+                  sx={{
+                    width: 4,
+                    height: 40,
+                    position: "absolute",
+                    left: 0,
+                    top: "50%",
+                    transform: "translate(0%, -50%)",
+                    bgcolor: "#F05A22",
+                    borderTopRightRadius: "4px",
+                    borderBottomRightRadius: "4px",
+                    boxShadow: "2px 0px 6px 0px rgba(240,90,34,0.75)",
+                  }}
+                />
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  gap={2}
+                  height={75}
+                  px={2}
+                >
+                  <Box component="img" src={travelicon} />
+                  <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>
+                    The Festival in Malta-ს საგზური
+                  </Typography>
+                </Stack>
+              </Box>
               <Box
                 sx={{
-                  width: 4,
-                  height: 40,
-                  position: "absolute",
-                  left: 0,
-                  top: "50%",
-                  transform: "translate(0%, -50%)",
-                  bgcolor: "#F05A22",
-                  borderTopRightRadius: "4px",
-                  borderBottomRightRadius: "4px",
-                  boxShadow: "2px 0px 6px 0px rgba(240,90,34,0.75)",
+                  border: "2px solid #2C3234",
+                  color: "white",
+                  borderRadius: "10px",
+                  backgroundColor: "#1E2122",
+                  mt: 1.5,
+                  position: "relative",
                 }}
-              />
-              <Stack
-                direction="row"
-                alignItems="center"
-                gap={2}
-                height={75}
-                px={2}
               >
-                <Box component="img" src={ticketicon} />
-                <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>
-                  სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც
-                  გათამაშდება The Festival in Malta-ს საგზური
-                </Typography>
-              </Stack>
-            </Box>
-            <Box
-              sx={{
-                border: "2px solid #2C3234",
-                color: "white",
-                borderRadius: "15px",
-                backgroundColor: "#1E2122",
-                my: 1.5,
-                position: "relative",
-              }}
-            >
+                <Box
+                  sx={{
+                    width: 4,
+                    height: 40,
+                    position: "absolute",
+                    left: 0,
+                    top: "50%",
+                    transform: "translate(0%, -50%)",
+                    bgcolor: "#F05A22",
+                    borderTopRightRadius: "4px",
+                    borderBottomRightRadius: "4px",
+                    boxShadow: "2px 0px 6px 0px rgba(240,90,34,0.75)",
+                  }}
+                />
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  gap={2}
+                  height={75}
+                  px={2}
+                >
+                  <Box component="img" src={ticketicon} />
+                  <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>
+                    სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც
+                    გათამაშდება The Festival in Malta-ს საგზური
+                  </Typography>
+                </Stack>
+              </Box>
               <Box
                 sx={{
-                  width: 4,
-                  height: 40,
-                  position: "absolute",
-                  left: 0,
-                  top: "50%",
-                  transform: "translate(0%, -50%)",
-                  bgcolor: "#F05A22",
-                  borderTopRightRadius: "4px",
-                  borderBottomRightRadius: "4px",
-                  boxShadow: "2px 0px 6px 0px rgba(240,90,34,0.75)",
+                  border: "2px solid #2C3234",
+                  color: "white",
+                  borderRadius: "15px",
+                  backgroundColor: "#1E2122",
+                  my: 1.5,
+                  position: "relative",
                 }}
-              />
-              <Stack
-                direction="row"
-                alignItems="center"
-                gap={2}
-                height={75}
-                px={2}
               >
-                <Box component="img" src={ticketicon} />
-                <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>ტექნიკის მაღაზიის ვაუჩერი</Typography>
-              </Stack>
-            </Box>
-          </Stack>
-        </Box>
-        <CashGamesTop20v2 />
-        <Typography textAlign="center" mb={2}>
-          {" "}
-          * ლიდერბორდის შედეგები განახლდება <Link color="#EF5A21">პოკერის ლობიში</Link>{" "}
-        </Typography>
-      </Stack>
+                <Box
+                  sx={{
+                    width: 4,
+                    height: 40,
+                    position: "absolute",
+                    left: 0,
+                    top: "50%",
+                    transform: "translate(0%, -50%)",
+                    bgcolor: "#F05A22",
+                    borderTopRightRadius: "4px",
+                    borderBottomRightRadius: "4px",
+                    boxShadow: "2px 0px 6px 0px rgba(240,90,34,0.75)",
+                  }}
+                />
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  gap={2}
+                  height={75}
+                  px={2}
+                >
+                  <Box component="img" src={ticketicon} />
+                  <Typography fontSize={{ lg: 15, md: 15, sm: 10, xs: 10 }}>
+                    ტექნიკის მაღაზიის ვაუჩერი
+                  </Typography>
+                </Stack>
+              </Box>
+            </Stack>
+          </Box>
+          <CashGamesTop20v2 />
+          <Typography textAlign="center" mb={2}>
+            {" "}
+            * ლიდერბორდის შედეგები განახლდება{" "}
+            <Link color="#EF5A21">პოკერის ლობიში</Link>{" "}
+          </Typography>
+        </Stack>
       </Box>
     </>
   );
