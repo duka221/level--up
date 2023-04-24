@@ -8,7 +8,7 @@ export const CashGames12Side = () => {
         sx={{
           border: "2px",
           color: "white",
-          borderRadius: "10px",
+          borderRadius: "16px",
           backgroundColor: "#2C3234",
           p: 3,
           textAlign: "center",

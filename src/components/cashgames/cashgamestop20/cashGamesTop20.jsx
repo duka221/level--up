@@ -50,7 +50,7 @@ export const CashGamesTop20 = () => {
   return (
     <>
     <Box
-        mt={2}
+        mt={3}
         sx={{
           border: "2px",
           color: "white",

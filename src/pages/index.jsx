@@ -195,8 +195,8 @@ export default function BasicModal() {
             <TabPanel sx={{ p: 0 }} value="1">
               <CashGames />{" "}
             </TabPanel>
-            <TabPanel value="2"><SpringSeries/></TabPanel>
-            <TabPanel value="3"><FinalStage/></TabPanel>
+            <TabPanel value="2" sx={{ p: 0 }}><SpringSeries/></TabPanel>
+            <TabPanel value="3" sx={{ p: 0 }}><FinalStage/></TabPanel>
           </TabContext>
         </Box>
         <Container
