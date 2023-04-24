@@ -1,8 +1,6 @@
-import { Box, Link, Stack, Tooltip, Typography } from "@mui/material";
+import { Box,  Stack,  Typography } from "@mui/material";
 import React from "react";
-import exampleicon from "../../../assets/example-icon.png";
-import ticketicon from "../../../assets/ticket-icon-sm.png";
-import travelicon from "../../../assets/travel-icon-sm.png";
+
 export const MystKey = () => {
   const arr = [
     {

@@ -3,7 +3,7 @@ import TicketImg from "../../../assets/final-item-ticket-icon.png";
 import FinalImg2 from "../../../assets/final-item-event-icon.png";
 import FinalImg3 from "../../../assets/final-item-hotel-icon.png";
 import FinalImg4 from "../../../assets/final-item-money-icon.png";
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { Box,  Stack, Typography } from "@mui/material";
 
 export const FestMalta = () => {
   const arr = [

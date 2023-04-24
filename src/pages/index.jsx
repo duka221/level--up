@@ -6,7 +6,7 @@ import Modal from "@mui/material/Modal";
 import banner from "../assets/banner.jpg";
 import TabContext from "@mui/lab/TabContext";
 import TabPanel from "@mui/lab/TabPanel";
-import { Container, IconButton, Paper, Stack } from "@mui/material";
+import { IconButton, Paper, Stack } from "@mui/material";
 import { CashGames } from "../components/cashgames/index";
 import { SpringSeries } from "../components/springseries";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
