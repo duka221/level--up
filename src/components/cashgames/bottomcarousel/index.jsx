@@ -57,7 +57,7 @@ export const BottomCarousel = () => {
 
   return (
     <>
-      <Box mb={4} mt={6}>
+      <Box mb={2} mt={4}>
         <Typography fontSize="18px" fontWeight="bold">
           მსგავსი აქციები
         </Typography>

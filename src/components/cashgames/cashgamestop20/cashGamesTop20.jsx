@@ -331,7 +331,7 @@ export const CashGamesTop20 = () => {
           <Typography textAlign="center" mb={2}>
             {" "}
             * ლიდერბორდის შედეგები განახლდება{" "}
-            <Link color="#EF5A21">პოკერის ლობიში</Link>{" "}
+            <Link color="#EF5A21" sx={{cursor:"pointer"}}>პოკერის ლობიში</Link>{" "}
           </Typography>
         </Stack>
       </Box>

@@ -24,7 +24,7 @@ export const BottomInfo = () => {
             my: 1.5,
           }}
         >
-          <Accordion>
+          <Accordion sx={{ boxShadow: "none" }}>
             <AccordionSummary
               sx={{ bgcolor: "#25292B", color: "white" }}
               expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
@@ -54,7 +54,7 @@ export const BottomInfo = () => {
             my: 1.5,
           }}
         >
-          <Accordion>
+          <Accordion sx={{ boxShadow: "none" }}>
             <AccordionSummary
               sx={{ bgcolor: "#25292B", color: "white" }}
               expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
@@ -81,7 +81,7 @@ export const BottomInfo = () => {
             my: 1.5,
           }}
         >
-          <Accordion>
+          <Accordion sx={{ boxShadow: "none" }}>
             <AccordionSummary
               sx={{ bgcolor: "#25292B", color: "white" }}
               expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}

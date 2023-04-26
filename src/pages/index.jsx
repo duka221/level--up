@@ -17,6 +17,9 @@ export default function BasicModal() {
   const [value, setValue] = React.useState("1");
   const ButtonStyle = {
     textTransform: "none",
+    "&:hover": {
+      backgroundColor: "#ff6600",
+    },
     backgroundColor: "#ff6600",
     transition: "background-color 0.5s ease, outline 0.3s ease",
     outline: "10px solid #ff6600",
@@ -43,9 +46,10 @@ export default function BasicModal() {
         sx={{
           bgcolor: "#1C1D1E",
           position: "absolute",
-          width: { lg: 900, md: 900, sm: 600, xs: 400 },
-          maxHeight: "99vh",
-          overflowY: "auto",
+          maxWidth: 900,
+          width: 1,
+          maxHeight: "100%",
+          overflowY: "scroll",
           "&::-webkit-scrollbar": {
             width: "0.0em",
             backgroundColor: "transparent",
@@ -69,7 +73,14 @@ export default function BasicModal() {
               Sign Up
             </Button>
             <Button
-              sx={{ color: "white", textTransform: "none", bgcolor: "#F05A22" }}
+              sx={{
+                color: "white",
+                textTransform: "none",
+                bgcolor: "#F05A22",
+                "&:hover": {
+                  backgroundColor: "#ff6600",
+                },
+              }}
             >
               Sign In
             </Button>
@@ -89,7 +100,9 @@ export default function BasicModal() {
         <Stack
           direction="row"
           justifyContent="space-between"
-          width="870px"
+          mt={2}
+          width={{ lg: 1, md: 1 }}
+          maxWidth="870px"
           padding={1}
           sx={{
             position: { lg: "fixed", md: "fixed", sm: "block", xs: "block" },
@@ -106,7 +119,7 @@ export default function BasicModal() {
               color: "white",
               borderRadius: "50px",
               padding: "5px",
-              backgroundColor: "#25292B",
+              backgroundColor: "rgba(37, 41, 43,0.8)",
               fontSize: "15px",
               display: { lg: "inherit", md: "inherit" },
               "&:hover": {
@@ -136,11 +149,13 @@ export default function BasicModal() {
           <IconButton
             sx={{
               color: "white",
-              bgcolor: "#25292B",
+              bgcolor: "rgba(37, 41, 43,0.8)",
               display: { lg: "inherit", md: "inherit", sm: "none", xs: "none" },
               "&:hover": {
                 bgcolor: "#15181a",
                 transition: "background-color 0.3s ease-in-out",
+              backgroundColor: "rgba(37, 41, 43,0.8)",
+
               },
             }}
           >
@@ -242,7 +257,7 @@ export default function BasicModal() {
           </TabContext>
         </Box>
         <Box
-          width={{ lg: 900, md: 900, sm: 600, xs: 400 }}
+          width={{ lg: 900, md: 900, sm: 1, xs: 1 }}
           sx={{
             border: "none",
             borderRadius: 0,
